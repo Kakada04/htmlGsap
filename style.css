@@ -1,0 +1,70 @@
+/* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #D70024, #ff5c7a, #D70024);
+  background-size: 200% 200%;
+  animation: gradient-shift 10s ease infinite;
+  color: #ffffff;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in {
+  animation: fade-in-up 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.delay-100 {
+  animation-delay: 0.2s;
+}
+
+.delay-200 {
+  animation-delay: 0.4s;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.menu-trigger {
+  transition: all 0.3s ease;
+}
+
+.menu-trigger:hover {
+  background-color: #ff5c7a;
+}
+
+/* Ensure product section starts below fold */
+#product {
+  scroll-margin-top: 80px;
+}
+.bottle-container {
+  will-change: transform;
+}
